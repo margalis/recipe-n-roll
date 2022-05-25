@@ -1,0 +1,61 @@
+﻿<Window x:Class="RecipeDesktopUI.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeDesktopUI"
+        mc:Ignorable="d" FontSize="25"
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock  Grid.Column="1" Grid.Row="1" FontSize="40" 
+                    Text="Sign up" FontWeight="Bold" 
+                 Background="Azure" Grid.ColumnSpan="2"/>
+        <!--<Label Name = "nameLabel" Margin = "2">_Name:</Label>
+        <TextBox Name = "nameText" Grid.Column = "1" Margin = "2" 
+         Text = "{Binding Name, Mode = TwoWay}"/>
+        <Label Name = "ageLabel" Margin = "2" Grid.Row = "1">_Age:</Label>
+        <TextBox Name = "ageText" Grid.Column = "1" Grid.Row = "1" Margin = "2" 
+         Text = "{Binding Age, Mode = TwoWay}"/>
+
+        <StackPanel Grid.Row = "2" Grid.ColumnSpan = "2">
+            <Button Content = "_Show..." Click = "Button_Click" />
+        </StackPanel>-->
+        <StackPanel Grid.Row="2" Grid.Column="1"  Orientation ="Vertical" Grid.ColumnSpan="2">
+            <TextBlock  
+                    Text="Enter your full name:" />
+            <TextBox   x:Name="userRegname" ></TextBox>
+            <TextBlock 
+                    Text="Enter your email:" />
+            <TextBox   x:Name="userRegemail" ></TextBox>
+            <TextBlock  
+                    Text="Enter your password:" />
+            <PasswordBox  x:Name="userRegpassword" ></PasswordBox>
+            <TextBlock 
+                    Text="Confirm password:" />
+            <PasswordBox  x:Name="userRegpasswordconfirm"  ></PasswordBox>
+        </StackPanel>
+
+        <Button x:Name="RW_confirm" Content="Submit" Background="Coral" Grid.Column="1"  
+                Grid.Row="3"  Click="RW_RegisterButton_Click" />
+        <Button x:Name= "RW_Cancel" Content="Cancel" 
+                Grid.Column="2" Grid.Row="3" 
+                Click="RW_CancelButton_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" x:Name ="errormessage"   OpacityMask="Crimson" Foreground="#FFE5572C"  />
+    </Grid>
+   
+</Window>

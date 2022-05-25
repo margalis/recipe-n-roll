@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Chef_Man0-512.png" />
+    <None Remove="wallpaper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\Chef_Man0-512.png" />
+    <Resource Include="images\recipewall.jpg" />
+    <Resource Include="images\wallpaper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UIEntities\" />
+  </ItemGroup>
+
+</Project>
